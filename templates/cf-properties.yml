@@ -27,6 +27,11 @@ meta:
     - protocol: udp
       destination: 0.0.0.0/0
       ports: '53'
+  - name: redislabs
+    rules:
+    - protocol: tcp
+      destination: 0.0.0.0-255.255.255.255
+      ports: '18420'
 
 properties:
   <<: (( merge ))
